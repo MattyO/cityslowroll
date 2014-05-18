@@ -7,3 +7,7 @@ class SlowRoll(models.Model):
     to_address=models.CharField(max_length=100, null=True, blank=True)
     event_time=models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+

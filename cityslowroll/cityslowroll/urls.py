@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     url(r'^upload$', 'cms.views.upload'),
     url(r'^profile$', 'common.views.user_profile', name="user_profile"),
     url(r'^login$', 'django.contrib.auth.views.login',  name='login'),
-    url(r'^logout$', 'django.contrib.auth.views.logout', {"next_page": "login"}, name='logout'),
+    url(r'^logout$', 'django.contrib.auth.views.logout', {"next_page": "/"}, name='logout'),
     url(r'^reset-password$','django.contrib.auth.views.password_reset', name='reset-password'),
     url(r'^reset-password-done$','django.contrib.auth.views.password_reset_done', name="password_reset_done"),
     url(r'^password-confim/(?P<uidb64>.+)/(?P<token>.+)/$', 'django.contrib.auth.views.password_reset_confirm',name='password_reset_confirm'),
@@ -29,6 +29,7 @@ urlpatterns = patterns('',
     url("^post/([a-zA-z0-9-_]+)$", "cms.views.post"),
     url("^media-collection/([0-9]+)$", "cms.views.media_list"),
     url("^media-collection/view/([0-9]+)$", "cms.views.media" ),
+
     url("slow-rolls/([0-9]+)", 'rolls.views.event', name='slow_rolls'),
 
 )

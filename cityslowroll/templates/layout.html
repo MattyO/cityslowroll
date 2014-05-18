@@ -14,10 +14,10 @@
         <a class="navbar-brand" href="{% url 'index' %}"> City SlowRoll: Cleveland </>
         <ul class="nav navbar-nav navbar-right">
           {% if current_user.is_authenticated %}
-          <li> <a href="{% url 'user_profile' %}"> {{current_user.username}}</a>
+          <li> <a href="/admin"> {{current_user.username}}</a>
           <li> <a href="{% url 'logout' %}"> Logout </a> </li>
           {% else %}
-          <li> <a href="{% url 'login' %}"> Login </a> </li>
+          <li> <a href="/admin"> Login </a> </li>
           {% endif %}
         </ul>
       </div>

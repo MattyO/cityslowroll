@@ -32,6 +32,7 @@ def index(request):
     c = update_page_data('index', standard_context())
     c.update({
         'page': Page.objects.get(slug='index', active=True),
+        'current_user': request.user,
     })
     return render(request,'index.html' , c)
 
