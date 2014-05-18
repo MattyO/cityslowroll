@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3><a href="{% url 'index' %}">Back</a></h3>
+<article class="slow_roll"> 
+<h3>{{ event.title }}</h3>
+  <div class="description"> 
+    {{ event.description }}
+  </div>
+  <p> Start Time: {{event.start_time}}</p>
+  <p> From: {{ event.from_address }} </p>
+  <p> To: {{ event.to_address }} </p>
+</article>
+{% endblock %}

@@ -1,0 +1,5 @@
+*.pyc
+env/*
+reverse.py
+db.sqlite3
+cityslowroll/media/uploads/*.jpg

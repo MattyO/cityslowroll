@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load staticfiles %}
+<!--
+<div style="height: 70px; ">
+  <img src="{% static "img/city.png" %}" style="height: 100%; " >
+  <img src="{% static "img/bike.png" %}" style="height: 100%; ">
+</div>
+-->
+{{page.content | safe }}
+
+<p> Next Ride: <a href="{% url 'slow_rolls' next_ride.id %}">{{next_ride.event_time}}</a> </p>
+
+{% for event in slow_rolls %}
+<article class="slow_roll"> 
+<h3><a href="{% url 'slow_rolls' event.id %}">{{ event.title }}</a></h3>
+  <div class="description"> 
+    {{ event.description }}
+  </div>
+  <p> Start Time: {{event.event_time}}</p>
+  <p> From: {{ event.from_address }} </p>
+  <p> To: {{ event.to_address }} </p>
+</article>
+{% endfor %}
+
+{% endblock %}
