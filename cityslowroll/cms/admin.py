@@ -18,7 +18,6 @@ class FormatedTextInput(forms.Textarea):
     #    #css = ('vendor/vendor/redactor/redactor/redactor.css')
     #    #js = ('vendor/vendor/redactor/redactor/redactor.js')
 
-# Register your models here.
 class PageForm(forms.ModelForm):
     class Meta:
         model = Page

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rolls.models import SlowRoll
+from cms.helpers import nav
 
 def event(request, event_id):
     event = SlowRoll.objects.get(pk=event_id)
-    return render(request, 'rolls/event.html', {"event": event})
+    return render(request, 'rolls/event.html', {"event": event, 'nav':nav})

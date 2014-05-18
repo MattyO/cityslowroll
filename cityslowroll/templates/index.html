@@ -15,7 +15,7 @@
 <article class="slow_roll"> 
 <h3><a href="{% url 'slow_rolls' event.id %}">{{ event.title }}</a></h3>
   <div class="description"> 
-    {{ event.description }}
+    {{ event.description | safe }}
   </div>
   <p> Start Time: {{event.event_time}}</p>
   <p> From: {{ event.from_address }} </p>

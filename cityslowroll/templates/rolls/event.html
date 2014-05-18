@@ -4,7 +4,7 @@
 <article class="slow_roll"> 
 <h3>{{ event.title }}</h3>
   <div class="description"> 
-    {{ event.description }}
+    {{ event.description | safe }}
   </div>
   <p> Start Time: {{event.start_time}}</p>
   <p> From: {{ event.from_address }} </p>
