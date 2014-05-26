@@ -62,11 +62,11 @@ WSGI_APPLICATION = 'cityslowroll.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.' + os.environ['CITYSLOWROLL_DB_ENGINE'],
-        'NAME': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DB_NAME']),
-        'USER': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DB_USER']) , 
-        'PASSWORD': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DB_PASSWORD']) ,
-        'HOST': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DB_HOST']) , 
-        'PORT': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DB_PORT']) ,
+        'NAME': os.environ['CITYSLOWROLL_DB_NAME'],
+        'USER': os.environ['CITYSLOWROLL_DB_USER'],
+        'PASSWORD': os.environ['CITYSLOWROLL_DB_PASSWORD'],
+        'HOST': os.environ['CITYSLOWROLL_DB_HOST'],
+        'PORT': os.environ['CITYSLOWROLL_DB_PORT'] ,
     }
 }
 
