@@ -1,4 +1,13 @@
 {% extends 'layout.html' %}
+{% block intro %}
+  <section class="introduction"> 
+    <h3> 
+      {{page.content | safe }}
+    </h3>
+    <div class="clear"> </div>
+  </section> 
+{% endblock %}
+
 {% block content %}
 {% load staticfiles %}
 <!--
@@ -7,7 +16,6 @@
   <img src="{% static "img/bike.png" %}" style="height: 100%; ">
 </div>
 -->
-{{page.content | safe }}
 
 <p> Next Ride: <a href="{% url 'slow_rolls' next_ride.id %}">{{next_ride.event_time}}</a> </p>
 

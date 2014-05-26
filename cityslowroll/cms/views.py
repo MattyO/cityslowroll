@@ -40,6 +40,7 @@ def page(request, page_slug):
     c = update_page_data(page_slug, standard_context())
     c.update({
         'page': Page.objects.get(slug=page_slug, active=True),
+        'current_user': request.user,
     })
     return render(request, 'pages/single.html', c)
 

@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 {% block content %}
-        <h2> {{page.title}} </h2>
-	{{page.content | safe}}
+  <article> 
+      <h3> {{page.title}} </h3>
+      {{page.content | safe}}
+    </article>
 {% endblock %}

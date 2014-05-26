@@ -6,29 +6,25 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" >
     <script type="text/javascript" src="{% static "vendor/jquery-2.0.3.min.js" %}"> </script>
     <script type="text/javascript" src="{% static "vendor/galleria/galleria-1.3.5.js" %}"> </script>
+    <script type="text/javascript" src="{% static "vendor/bootstrap/js/bootstrap.min.js" %}"> </script>
   </head>
   <body>
+    {% block intro %}
+    {% endblock %}
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container"> 
-      <div class="collapse navbar-collapse ">
-        <a class="navbar-brand" href="{% url 'index' %}"> City SlowRoll: Cleveland </>
-        <ul class="nav navbar-nav navbar-right">
-          {% if current_user.is_authenticated %}
-          <li> <a href="/admin"> {{current_user.username}}</a>
-          <li> <a href="{% url 'logout' %}"> Logout </a> </li>
-          {% else %}
-          <li> <a href="/admin"> Login </a> </li>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-    </nav>
     <div class="container">
-      <div class="row">
-        <div class="col-md-2">
-          <aside> 
-          <h4> Pages </h4>
-          <ul class="nav"> 
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'index' %}"> City SlowRoll: Cleveland </a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#thechopper">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="thechopper">
+        <ul class="nav navbar-nav navbar-right">
             <li> 
             <a href="{% url 'index' %}">Home </a>
             </li>
@@ -37,16 +33,47 @@
             <a href="{% url 'page' page.slug %}">{{page.title}} </a>
             </li>
             {% endfor %}
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
 
-          </ul>
-          </aside>
-        </div>
-
-        <div class="col-md-10">
+        <div class="col-md-8 col-md-offset-2">
           {% block content %}
           {% endblock %}
         </div>
       </div>
     </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-md-3">
+            <h3> Contact Us</h3>
+            <p> At the email address: </p>
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <h3> Manage content </h3>
+            {% if current_user.is_authenticated %}
+            <p> 
+              <a href="/admin"> {{current_user.username}}</a>
+            </p>
+            <p>
+              <a href="{% url 'logout' %}"> Logout </a>
+            </p>
+            {% else %}
+            <p>
+              <a href="/admin"> Login </a>
+            </p>
+            {% endif %}
+          </div>
+        </div>
+        <!--
+          <div class="credits">
+            <p> That's it ! </p>
+          </div>
+          -->
+        </div>
+    </footer>
   </body>
 </html>

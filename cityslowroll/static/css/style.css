@@ -1,3 +1,85 @@
 body{
-	margin-top: 50px;
+	background-image: url("/static/img/bg-one.jpg");
+	font-size: 12pt;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-top: 100px;
+
+}
+
+h1, h2 ,h3, h4, h5, h6{
+	text-rendering: optimizelegibility;
+}
+
+footer {
+	color: #eee;
+	border-bottom: 5px solid rgb(34, 40, 41);
+	background-color: rgb(51, 57, 58);
+	font-size: 12px;
+	margin-top: 25px;
+}
+
+footer h3{
+	font-weight: normal;
+
+}
+footer 
+
+.credits {
+	background-color: rgb(34, 40, 41);
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.navbar {
+	background-color: rgb(51, 57, 58);
+	box-shadow: 0px 0px 2px 0px rgb(0, 0, 0);
+}
+.navbar-inverse .navbar-brand{
+	color: white;
+}
+ul.nav li a {
+	color: #d8dadc;
+	letter-spacing: 1px;
+	font-size: 14px;
+	font-family: Oswald,Arial,sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-webkit-transition: background-color 1s;
+	-o-transition: background-color 1s;
+}
+.introduction{
+	margin-top: -20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.introduction h3 {
+	font-size: 16px;
+	padding: 0 50px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0px rgb(250, 250, 250), 2px 2px 0px rgba(95, 149, 176, 0.5), 0px 0px 1px rgb(250, 250, 250);
+
+}
+article {
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: rgb(255, 255, 255);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 1px 1px 0px 0px rgb(204, 204, 204);
+	-moz-box-shadow: 1px 1px 0px 0px rgb(204, 204, 204);
+	box-shadow: 1px 1px 0px 0px rgb(204, 204, 204);
+	-moz-box-sizing: border-box;
+	overflow: hidden;
+}
+article h3 a{
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 30px;
+	color: rgb(51, 57, 58);
+	transition: color 1s;
+	-moz-transition: color 1s;
+	-webkit-transition: color 1s;
+	-o-transition: color 1s;
 }
