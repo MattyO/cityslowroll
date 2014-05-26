@@ -11,6 +11,7 @@ h1, h2 ,h3, h4, h5, h6{
 }
 
 footer {
+	min-height:155px;
 	color: #eee;
 	border-bottom: 5px solid rgb(34, 40, 41);
 	background-color: rgb(51, 57, 58);
