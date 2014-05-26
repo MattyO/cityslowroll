@@ -66,7 +66,7 @@ DATABASES = {
         'USER': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DB_USER']) , 
         'PASSWORD': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DB_PASSWORD']) ,
         'HOST': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DB_PORT']) , 
-        'PORT': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DEBUG']) ,
+        #'PORT': os.path.join(BASE_DIR, os.environ['CITYSLOWROLL_DEBUG']) ,
     }
 }
 
