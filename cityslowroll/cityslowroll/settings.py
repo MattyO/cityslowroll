@@ -67,7 +67,6 @@ database_info = {
         'PORT': os.environ['CITYSLOWROLL_DB_PORT'] ,
     }
 
-print database_info
 
 DATABASES = {
     'default': database_info
