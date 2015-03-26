@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content %}
+  {% for roll in slowrolls %}
+      <h2> {{ roll.title }} </h2>
+    <article>
+      <p> <strong>Time</strong>: {{ roll.event_time }} </p>
+      <p>  <strong>Address</strong>: {{ roll.from_address }} </p>
+      {{ roll.description | safe }}
+    </article>
+  {% endfor %}
+{% endblock %}

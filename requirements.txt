@@ -1,4 +1,1 @@
 django
-jinja2
-gunicorn
-mysql-python

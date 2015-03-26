@@ -37,12 +37,18 @@ def index(request):
     return render(request,'index.html' , c)
 
 def page(request, page_slug):
+    template_to_render = 'pages/single.html'
+    page = Page.objects.get(slug=page_slug, active=True)
+
     c = update_page_data(page_slug, standard_context())
     c.update({
-        'page': Page.objects.get(slug=page_slug, active=True),
+        'page': page,
         'current_user': request.user,
     })
-    return render(request, 'pages/single.html', c)
+
+    if page.template is not None:
+         page_to_render  = page.template
+    return render(request, page_to_render, c)
 
 def post(request, post_id):
     pass 

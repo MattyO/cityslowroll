@@ -1,6 +1,6 @@
 *.pyc
 env/*
 reverse.py
-db.sqlite3
+*.sqlite3
 cityslowroll/media/uploads/*.jpg
 .DS_STORE
