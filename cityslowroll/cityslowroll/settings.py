@@ -104,6 +104,7 @@ SITE_NAME = "cityslowroll"
 LOGIN_REDIRECT_URL= 'user_profile'
 LOGOUT_URL = 'logout'
 
+TRACKING_ID=os.environ.get("TRACKING_ID","")  
 #EMAIL_HOST="****************"
 #EMAIL_PORT=587
 #EMAIL_HOST_USER="**********************"

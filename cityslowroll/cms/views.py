@@ -26,7 +26,7 @@ def update_page_data(page_name, page_context):
     return page_context
 
 def standard_context():
-    return { 'nav': nav, 'app_name' : settings.SITE_NAME }
+    return { 'nav': nav, 'app_name' : settings.SITE_NAME, 'tracking_id': settings.TRACKING_ID}
 
 def index(request):
     c = update_page_data('index', standard_context())
