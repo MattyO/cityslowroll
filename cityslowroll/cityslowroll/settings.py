@@ -59,12 +59,12 @@ WSGI_APPLICATION = 'cityslowroll.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 database_info = {
-        'ENGINE': 'django.db.backends.' + os.environ['CITYSLOWROLL_DB_ENGINE'],
-        'NAME': os.environ['CITYSLOWROLL_DB_NAME'],
-        'USER': os.environ['CITYSLOWROLL_DB_USER'],
-        'PASSWORD': os.environ['CITYSLOWROLL_DB_PASSWORD'],
-        'HOST': os.environ['CITYSLOWROLL_DB_HOST'],
-        'PORT': os.environ['CITYSLOWROLL_DB_PORT'] ,
+        'ENGINE': 'django.db.backends.' + os.environ['DB_ENGINE'],
+        'NAME': os.environ['DB_NAME'],
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASSWORD'],
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ['DB_PORT'] ,
     }
 
 
