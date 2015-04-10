@@ -1,9 +1,11 @@
 {% extends 'layout.html' %}
+{% load staticfiles %}
 {% block content%}
-  <section> 
-      <h1>Cleveland Slow Roll</h1>
+  <h1>Cleveland Slow Roll</h1>
+  <img class="index-header img-responsive" src="{% static "img/header.jpg" %}" />
+  <section>
       {{page.content | safe }}
     <div class="clear"> </div>
-  </section> 
+  </section>
 {% endblock %}
 

@@ -2,12 +2,15 @@ body{
 	background-image: url("/static/img/bg-one.jpg");
 	font-size: 12pt;
 	font-family: 'Source Sans Pro', sans-serif;
-	padding-top: 100px;
+	padding-top: 60px;
 
 }
 
 h1, h2 ,h3, h4, h5, h6{
 	text-rendering: optimizelegibility;
+}
+h1{
+	margin-bottom: 20px;
 }
 
 footer {
@@ -92,6 +95,11 @@ article h3 a{
 html, body {
 	height: 100%;
 }
+
+.index-header{
+	margin-bottom: 20px;
+}
+
 .wrapper {
 	min-height: 100%;
 	height: auto !important;

@@ -7,5 +7,7 @@
       <p>  <strong>Address</strong>: {{ roll.from_address }} </p>
       {{ roll.description | safe }}
     </article>
+  {% empty %}
+    <h2>No Cleveland Slow Rolls to right now.</h2>
   {% endfor %}
 {% endblock %}
